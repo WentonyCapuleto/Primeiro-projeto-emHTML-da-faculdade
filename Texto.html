@@ -1,0 +1,201 @@
+<html>
+ <head>
+   <title> Shopping Poli Guarulhos </title>
+<link rel="shotcut icon" href="Icon.png" type="image/x-png"/>
+
+   <body>
+
+<table border="0" width=1350 bgcolor=#ff5555>
+
+ <tr>
+  <td rowspan="2"> <img src="Logo.png" width="150" height="110"/> </td>
+  <td> <font face="Arial Black" size="5">O shopping do coração de Guarulhos</font> </td>
+  <td> </td>
+ </tr>
+
+ <tr>
+  <td> </td>
+  <td> <a href="https://www.facebook.com/shoppingpoli" title="Facebook" target="_blank">
+<img src="Facebook.png" width="35" height="35">
+</a>
+
+&nbsp &nbsp
+
+<a href="https://www.instagram.com/poli_shopping" title="Instagram" target="_blank">
+<img src="Instagram.png"  width="35" height="35"/>
+</a> </td>
+ </tr>
+
+</table>
+
+
+
+<script type="text/javascript">
+
+   function limpar ()  {
+             document.Cadastro_Cliente.txtnome.style.background="white";
+             document.Cadastro_Cliente.txtemail.style.background="white";
+             document.Cadastro_Cliente.txttelefone.style.background="white";
+               }
+
+
+           function verificar() {
+              limpar () ;
+
+
+           var n, e, t, m;
+
+           n = document.Cadastro_Cliente.txtnome.value ;
+
+           if ( n.length == 0 ) {
+
+             alert("Preencha o Nome") ;
+             document.Cadastro_Cliente.txtnome.focus() ;
+             document.Cadastro_Cliente.txtnome.style.background="white";
+             return false ;             
+         }
+
+
+           e = document.Cadastro_Cliente.txtemail.value ;
+
+           if ( e.indexOf("@") < 0 ) {
+
+             alert("Preencha corretamente o E-mail") ;
+             document.Cadastro_Cliente.txtemail.focus() ;
+             document.Cadastro_Cliente.txtemail.style.background="white";
+             return false ;             
+         }
+
+
+           t = document.Cadastro_Cliente.txttelefone.value ;
+
+           if ( isNaN(t) || t.legth == 0) {
+
+             alert("Preencha corretamente o Telefone") ;
+             document.Cadastro_Cliente.txttelefone.focus() ;
+             document.Cadastro_Cliente.txttelefone.style.background="white";
+             document.Cadastro_Cliente.txttelefone.value = "" ;
+             return false ;             
+         } 
+
+
+          m = document.Cadastro_Cliente.mens.value ;
+
+
+           if ( m.length == 0 ) {
+
+             alert("Mensagem não pode ser enviada em branco") ;
+             document.Cadastro_Cliente.mens.focus() ;
+             document.Cadastro_Cliente.mens.style.background="white";
+             return false ;             
+         }
+
+
+         document.Cadastro_Cliente.submit(); 
+
+       }
+
+         </script>
+
+
+
+ </head>
+
+  <body>
+
+      <form name="Cadastro_Cliente" method="post" action ="grava.jsp">
+
+
+<table border="0" Width=1000" align="left">
+
+<tr>
+ <td rowspan="3" width="5%">
+
+       Nome:<br>
+       <input type="text" name="txtnome" size=30" maxlength="50">
+
+<br>
+       E-mail:<br>
+     <input type="text" name="txtemail" size="30" maxlength="50">
+
+<br>
+       Telefone:<br>
+     <input type="text" name="txtidade" size="30" maxlength="11">
+
+<br><br>
+      <input type="radio" name="tipodemsg" value="S"> Sugestão
+      <input type="radio" name="tipodemsg" value="R"> Reclamação
+  
+<br><br>
+      Mensagem:<br>
+      <textarea name="mens" cols="50" rows="5"></textarea>
+
+
+<br><br>
+      <input type="button" value="Enviar" onclick="verificar()">
+
+
+      </form>
+
+ </td>
+
+ <td rowspan="3" width="20%" align="right">
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+|<br>
+ </td>
+
+ <td width="20%">
+<b>Endereço</b><br>
+Rua Dom Pedro II, 178<br>
+Centro - Guarulhos/SP<br>
+ </td>
+</tr>
+
+<tr>
+ <td width="20%">
+<b>Horário de Funcionamento</b><br>
+De Seg a Sab: Das 09hr ás 21hr
+ </td>
+</tr>
+
+<tr>
+ <td width="20%">
+<b>Contato:</b><br>
+11 2463-9360 / 11 2409-6555<br>
+recepcao@polishopping.com.br
+ </td>
+</tr>
+
+
+</table>
+
+<br><br>
+ <table border="0" align="right">
+
+  <tr>
+<td width="300"> <img src="Bolsa.png" width="220"/> </td>
+  </tr>
+
+ </table>
+
+
+   </body>
+ </head>
+</html>
